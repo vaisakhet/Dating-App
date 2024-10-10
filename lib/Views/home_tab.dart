@@ -220,8 +220,8 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                   ],
                 ),
                 child: Image.asset(
-                  AppAssets.dummyBanner1,
-                  fit: BoxFit.fill,
+                  AppAssets.userImage2,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -236,7 +236,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                       SizedBox(
                         width: 170,
                         child: Text(
-                          "${userDetails.user!.firstName.toString()} ${userDetails.user!.lastName.toString()}",
+                          "${userDetails.user!.firstName.toString()} ",
                           overflow: TextOverflow.ellipsis,
                           style: AppStyles.of(context).figtreeMedium.copyWith(
                               fontSize: 12,
@@ -252,21 +252,24 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                       )
                     ],
                   ),
-                  SizedBox(
-                    width: 170,
-                    child: Text(
-                      "$age Yrs, $roundedHeightInInches\"",
-                      overflow: TextOverflow.ellipsis,
-                      style: AppStyles.of(context).figtreeMedium.copyWith(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.white),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SizedBox(
+                      width: 190,
+                      child: Text(
+                        "$age Yrs, $roundedHeightInInches\"",
+                        overflow: TextOverflow.ellipsis,
+                        style: AppStyles.of(context).figtreeMedium.copyWith(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.white),
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 190,
                     child: Text(
-                      "${userDetails.city}, ${userDetails.state}",
+                      "Kozhikode, Kerala",
                       overflow: TextOverflow.ellipsis,
                       style: AppStyles.of(context).figtreeMedium.copyWith(
                           fontSize: 12,
@@ -346,8 +349,8 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                   ],
                 ),
                 child: Image.asset(
-                  AppAssets.dummyBanner1,
-                  fit: BoxFit.fill,
+                  AppAssets.userImage2,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -362,7 +365,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                       SizedBox(
                         width: 170,
                         child: Text(
-                          "${userDetails.user!.firstName.toString()} ${userDetails.user!.lastName.toString()}",
+                          "userDetails.user!.firstName.toString()",
                           overflow: TextOverflow.ellipsis,
                           style: AppStyles.of(context).figtreeMedium.copyWith(
                               fontSize: 12,
@@ -392,7 +395,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                   SizedBox(
                     width: 190,
                     child: Text(
-                      "${userDetails.city}, ${userDetails.state}",
+                      "Kozhikode, Kerala",
                       overflow: TextOverflow.ellipsis,
                       style: AppStyles.of(context).figtreeMedium.copyWith(
                           fontSize: 12,
