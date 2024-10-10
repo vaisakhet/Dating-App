@@ -1,9 +1,11 @@
 import 'package:dating_app/Core/Config/size_config.dart';
+import 'package:dating_app/Core/Services/shared_preferance.dart';
 import 'package:dating_app/Resorces/app_assets.dart';
 import 'package:dating_app/Resorces/app_color.dart';
 import 'package:dating_app/Views/chat_tab.dart';
 import 'package:dating_app/Views/favourite_tab.dart';
 import 'package:dating_app/Views/home_tab.dart';
+import 'package:dating_app/Views/login_screen.dart';
 import 'package:dating_app/Views/profile_tab.dart';
 import 'package:dating_app/controller/theme_controller.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +31,8 @@ class _BottomAppBrState extends State<BottomAppBr> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   final ThemeController _themeController = Get.find();
+
+  final _prefns = SharedPrefResponse.instance;
 
   bool value = false;
 
@@ -100,7 +104,8 @@ class _BottomAppBrState extends State<BottomAppBr> {
               leading: Icon(Icons.logout),
               title: Text('LogOut'),
               onTap: () {
-                Navigator.pushNamed(context, '/transactionsList');
+                _prefns.signOut();
+                Get.to(() => const LoginScreenView());
               },
             ),
           ],
