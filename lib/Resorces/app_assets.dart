@@ -66,4 +66,8 @@ class AppAssets {
   static const bubblesIcon = "assets/icons/bubbles.svg";
 
   static const closeIcon = "assets/icons/close.svg";
+
+  static const userImage = "assets/images/user.png";
+
+  static const userImage2 = "assets/images/user2.jpg";
 }
